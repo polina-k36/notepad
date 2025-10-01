@@ -149,5 +149,29 @@ namespace Pr2
                 richTextBox1.SelectionFont = fontDialog.Font;
             }
         }
+
+        private void yellowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Yellow;
+        }
+
+        private void greenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.ForeColor = Color.Green;
+        }
+
+        private void darkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.menuStrip1.BackColor = Color.SlateGray;
+            this.richTextBox1.BackColor = Color.DimGray;
+            this.richTextBox1.ForeColor = Color.White;
+        }
+
+        private void lightToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.richTextBox1.BackColor = Color.Snow;
+            this.richTextBox1.ForeColor = SystemColors.WindowText;
+            this.menuStrip1.BackColor = SystemColors.ActiveCaption;
+        }
     }
 }

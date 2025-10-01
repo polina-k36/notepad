@@ -50,6 +50,11 @@
             this.DataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.ColorButton = new System.Windows.Forms.Button();
+            this.yellowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.greenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.darkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +65,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.FileToolStripMenuItem,
             this.EditToolStripMenuItem,
-            this.DataToolStripMenuItem});
+            this.DataToolStripMenuItem,
+            this.themeToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(581, 28);
@@ -147,7 +153,9 @@
             this.WhiteToolStripMenuItem,
             this.BlueToolStripMenuItem,
             this.RedToolStripMenuItem,
-            this.BlackToolStripMenuItem});
+            this.BlackToolStripMenuItem,
+            this.yellowToolStripMenuItem,
+            this.greenToolStripMenuItem});
             this.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem";
             this.ColorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ColorToolStripMenuItem.Text = "Цвет";
@@ -155,28 +163,28 @@
             // WhiteToolStripMenuItem
             // 
             this.WhiteToolStripMenuItem.Name = "WhiteToolStripMenuItem";
-            this.WhiteToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.WhiteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.WhiteToolStripMenuItem.Text = "Белый";
             this.WhiteToolStripMenuItem.Click += new System.EventHandler(this.WhiteToolStripMenuItem_Click);
             // 
             // BlueToolStripMenuItem
             // 
             this.BlueToolStripMenuItem.Name = "BlueToolStripMenuItem";
-            this.BlueToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.BlueToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.BlueToolStripMenuItem.Text = "Синий";
             this.BlueToolStripMenuItem.Click += new System.EventHandler(this.BlueToolStripMenuItem_Click);
             // 
             // RedToolStripMenuItem
             // 
             this.RedToolStripMenuItem.Name = "RedToolStripMenuItem";
-            this.RedToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.RedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.RedToolStripMenuItem.Text = "Красный";
             this.RedToolStripMenuItem.Click += new System.EventHandler(this.RedToolStripMenuItem_Click);
             // 
             // BlackToolStripMenuItem
             // 
             this.BlackToolStripMenuItem.Name = "BlackToolStripMenuItem";
-            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(154, 26);
+            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.BlackToolStripMenuItem.Text = "Черный";
             this.BlackToolStripMenuItem.Click += new System.EventHandler(this.BlackToolStripMenuItem_Click);
             // 
@@ -211,6 +219,8 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Snow;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Location = new System.Drawing.Point(0, 28);
             this.richTextBox1.Name = "richTextBox1";
@@ -226,6 +236,43 @@
             this.ColorButton.TabIndex = 2;
             this.ColorButton.UseVisualStyleBackColor = true;
             this.ColorButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // yellowToolStripMenuItem
+            // 
+            this.yellowToolStripMenuItem.Name = "yellowToolStripMenuItem";
+            this.yellowToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.yellowToolStripMenuItem.Text = "Желтый";
+            this.yellowToolStripMenuItem.Click += new System.EventHandler(this.yellowToolStripMenuItem_Click);
+            // 
+            // greenToolStripMenuItem
+            // 
+            this.greenToolStripMenuItem.Name = "greenToolStripMenuItem";
+            this.greenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.greenToolStripMenuItem.Text = "Зеленый";
+            this.greenToolStripMenuItem.Click += new System.EventHandler(this.greenToolStripMenuItem_Click);
+            // 
+            // themeToolStripMenuItem
+            // 
+            this.themeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.darkToolStripMenuItem,
+            this.lightToolStripMenuItem});
+            this.themeToolStripMenuItem.Name = "themeToolStripMenuItem";
+            this.themeToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.themeToolStripMenuItem.Text = "Смена темы";
+            // 
+            // darkToolStripMenuItem
+            // 
+            this.darkToolStripMenuItem.Name = "darkToolStripMenuItem";
+            this.darkToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.darkToolStripMenuItem.Text = "Темная";
+            this.darkToolStripMenuItem.Click += new System.EventHandler(this.darkToolStripMenuItem_Click);
+            // 
+            // lightToolStripMenuItem
+            // 
+            this.lightToolStripMenuItem.Name = "lightToolStripMenuItem";
+            this.lightToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.lightToolStripMenuItem.Text = "Светлая";
+            this.lightToolStripMenuItem.Click += new System.EventHandler(this.lightToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -268,6 +315,11 @@
         private System.Windows.Forms.ToolStripMenuItem NewToolStripMenuItem;
         private System.Windows.Forms.Button ColorButton;
         private System.Windows.Forms.ToolStripMenuItem FontToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yellowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem greenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem darkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lightToolStripMenuItem;
     }
 }
 
